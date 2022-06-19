@@ -69,64 +69,64 @@
  * @return {boolean}
  */
  var isRobotBounded = function(instructions) {
-    let a = 0
-    let b = 0
-    let instructionsArr = instructions.split('')
-    let directionFacing = 'North'
-    let count = 0
-    
-    for (let j = 0; j < 4; j++){
-    for (let i = 0; i < instructionsArr.length; i++){ 
-        if (instructionsArr[i] === 'G'){
-            if(directionFacing === 'North'){
-                a++
-            } else if (directionFacing === 'South'){
-                a--
-            } else if (directionFacing === 'East'){
-                b++
-            } else if (directionFacing === 'West'){
-                b--
-            }
-            
-        }
-        
-        
-        if (instructionsArr[i] === 'R'){
-            if (directionFacing === 'North'){
-                directionFacing = 'East'
-            } else if (directionFacing === 'East'){
-                directionFacing = 'South'
-            } else if (directionFacing === 'South'){
-                directionFacing = 'West'
-            } else if (directionFacing === 'West'){
-                directionFacing = 'North'
-            }
-            
-        }
-        
-        
-        if (instructionsArr[i] === 'L'){
-           if (directionFacing === 'North'){
-                directionFacing = 'West'
-            } else if (directionFacing === 'West'){
-                directionFacing = 'South'
-            } else if (directionFacing === 'South'){
-                directionFacing = 'East'
-            } else if (directionFacing === 'East'){
-                directionFacing = 'North'
-            }
-            
-        }
-      
-    //Check if the robot has made a circle
-      if(a === 0 && b === 0 && i === instructionsArr.length - 1){
-          return true;
-      } 
+  let a = 0
+  let b = 0
+  let instructionsArr = instructions.split('')
+  let directionFacing = 'North'
+  let count = 0
+  
+  for (let j = 0; j < 4; j++){
+  for (let i = 0; i < instructionsArr.length; i++){ 
+      if (instructionsArr[i] === 'G'){
+          if(directionFacing === 'North'){
+              a++
+          } else if (directionFacing === 'South'){
+              a--
+          } else if (directionFacing === 'East'){
+              b++
+          } else if (directionFacing === 'West'){
+              b--
+          }
           
       }
-     
+      
+      
+      if (instructionsArr[i] === 'R'){
+          if (directionFacing === 'North'){
+              directionFacing = 'East'
+          } else if (directionFacing === 'East'){
+              directionFacing = 'South'
+          } else if (directionFacing === 'South'){
+              directionFacing = 'West'
+          } else if (directionFacing === 'West'){
+              directionFacing = 'North'
+          }
+          
+      }
+      
+      
+      if (instructionsArr[i] === 'L'){
+         if (directionFacing === 'North'){
+              directionFacing = 'West'
+          } else if (directionFacing === 'West'){
+              directionFacing = 'South'
+          } else if (directionFacing === 'South'){
+              directionFacing = 'East'
+          } else if (directionFacing === 'East'){
+              directionFacing = 'North'
+          }
+          
+      }
+    
+  //Check if the robot has made a circle
+    if(a === 0 && b === 0 && i === instructionsArr.length - 1){
+        return true;
+    } 
+        
     }
-    
-    
-    return false;
+   
+  }
+  
+  
+  return false;
 };
