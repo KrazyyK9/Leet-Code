@@ -25,8 +25,6 @@
 // parkingSystem.addCar(3); // return false because there is no available slot for a small car
 // parkingSystem.addCar(1); // return false because there is no available slot for a big car. It is already occupied.
 
- 
-
 // Constraints:
 
 //     0 <= big, medium, small <= 1000
@@ -46,9 +44,3 @@
                  return false;
              };
 
-// Input
-// ["ParkingSystem", "addCar", "addCar", "addCar", "addCar"]
-// [[1, 1, 0], [1], [2], [3], [1]]
-
-// Output
-// [null, true, true, false, false] 
