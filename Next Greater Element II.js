@@ -26,8 +26,6 @@
 //     -109 <= nums[i] <= 109
 
 
-// Time O(N^2)
-
 var nextGreaterElements = function(nums) {
     if(!nums.length) {
         return [];
@@ -46,6 +44,3 @@ var nextGreaterElements = function(nums) {
     return result;
     
 };
-
-console.log([1,2,1]) // [2,-1,2]
-console.log([1,2,3,4,3]) // [2,3,4,-1,4]
